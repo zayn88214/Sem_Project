@@ -1,0 +1,46 @@
+{
+  "name": "agrocore-monorepo",
+  "version": "1.0.0",
+  "description": "AGROCORE - AI Powered Agricultural Intelligence System (MERN Stack)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && npm --prefix frontend install && npm --prefix backend install && pip install -r ml/requirements.txt",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\" \"python -m ml.app.main\"",
+    "start": "node backend/src/app.js",
+    "client": "npm run dev --prefix frontend",
+    "server": "npm run dev --prefix backend",
+    "ml": "python -m ml.app.main",
+    "build": "npm --prefix frontend build && npm --prefix backend build",
+    "lint": "concurrently \"npm --prefix frontend lint\" \"npm --prefix backend lint\"",
+    "lint:fix": "concurrently \"npm --prefix frontend lint:fix\" \"npm --prefix backend lint:fix\"",
+    "setup": "npm run install:all && npm run build",
+    "production": "npm --prefix backend start",
+    "seed": "node backend/seed.js"
+  },
+  "keywords": [
+    "agriculture",
+    "ai",
+    "crop",
+    "disease",
+    "detection",
+    "mern",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "AgroCore Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0",
+    "python": ">=3.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}

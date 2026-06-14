@@ -1,0 +1,40 @@
+{
+  "crops": [
+    "Bean",
+    "Broccoli",
+    "Cabbage",
+    "Carrot",
+    "Chickpea",
+    "Chili",
+    "Cotton",
+    "Cucumber",
+    "Groundnut",
+    "Lentil",
+    "Maize",
+    "Onion",
+    "Pea",
+    "Potato",
+    "Radish",
+    "Rice",
+    "Soybean",
+    "Spinach",
+    "Sugarcane",
+    "Sunflower",
+    "Tomato",
+    "Wheat"
+  ],
+  "features": [
+    "Nitrogen",
+    "Phosphorus",
+    "Potassium",
+    "pH",
+    "Temperature",
+    "Humidity",
+    "Rainfall"
+  ],
+  "n_estimators": 200,
+  "max_depth": 20,
+  "train_accuracy": 1.0,
+  "test_accuracy": 0.2525,
+  "n_crops": 22
+}
